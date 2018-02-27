@@ -1,8 +1,14 @@
 from flask import Flask
+from flask import render_template
+
 app = Flask(__name__)
 
-@app.route("/")
-def hello():
-    return "Hello World!"
+@app.route('/')
+@app.route('/Index')
+def Index():
+        user2 = {'username4': 'moto'}
+        return render_template('Index.html', user1=user2)
+
 
 app.run()
+
