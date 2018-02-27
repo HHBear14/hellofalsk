@@ -8,7 +8,7 @@ app = Flask(__name__)
 def Index():
         user2 = {'username4': 'moto'}
 
-        posts5 = [
+        posts = [
             {
                 'title': {'main': 'I hate Python', 'sub': 'this is a sad story'},
                 'body': 'Python can do every thing. However, it is very hard.'
@@ -16,12 +16,16 @@ def Index():
             {
                 'title': {'main': 'I love Python', 'sub': 'this is a happy story'},
                 'body': 'Python can do every thing. However, it is very easy.'
+            },
+            {
+                'title': {'main': 'I love C+', 'sub': 'this is a happy story'},
+                'body': 'C+ can do every thing. However, it is very easy.'
             }
         ]
 
 
 
-        return render_template('Index.html', user1=user2, posts1=posts5)
+        return render_template('Index.html', user1=user2, posts5=posts)
 
 
 app.run()
