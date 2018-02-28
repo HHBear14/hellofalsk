@@ -1,6 +1,7 @@
 from app import app2 as app
 from flask import render_template, flash, redirect
 from app.Forms import LoginForm
+from app import Post
 
 @app.route('/')
 @app.route('/Index')
@@ -9,20 +10,7 @@ def Index():
 
         a3title = {'username15': 'Dov'}
 
-        posts2 = [
-            {
-                'title': {'main': 'I hate Python', 'sub': 'this is a sad story'},
-                'body': 'Python can do every thing. However, it is very hard.'
-            },
-            {
-                'title': {'main': 'I love Python', 'sub': 'this is a happy story'},
-                'body': 'Python can do every thing. However, it is very easy.'
-            },
-            {
-                'title': {'main': 'I love C+', 'sub': 'this is a happy story'},
-                'body': 'C+ can do every thing. However, it is very easy.'
-            }
-        ]
+        posts2 = Post.query.all()
 
 
 
