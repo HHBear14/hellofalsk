@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <title>Hello {{user1.username4}}</title>
-   </head>
-   <body>
-       <h1>Hello {{user1.username4}}!</h1>
+{% extends "Base.html" %}
+{% block content %}
+    <h1>Hello {{user1.username4}}!</h1>
        {% for post in posts5 %}
        <div><H1>{{ post.title.main }}</H1>{{ post.body }}</div>
        {% endfor %}
-   </body>
-</html>
+{% endblock %}
 

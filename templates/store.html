@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "Base.html" %}
+{% block content %}
+    <h1>Store!</h1>
+       {% for item in items5 %}
+       <div><H1>{{ item.title }}</H1>{{ item.price }}</div>
+       {% endfor %}
+{% endblock %}
